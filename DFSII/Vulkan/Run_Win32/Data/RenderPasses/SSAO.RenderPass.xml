@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RenderPass>
+	<Attachments>
+		<!-- Describe every attachment used.
+	
+		Type descriptions:
+		Color = 
+		{
+			format = VK_FORMAT_B8G8R8A8_UNORM
+			storeOp = VK_ATTACHMENT_STORE_OP_DONT_CARE
+			finalLayout = VK_IMAGE_LAYOUT_UNDEFINED
+			stencilLoadOp = VK_ATTACHMENT_LOAD_OP_DONT_CARE
+		}
+		Depth = 
+		{
+			format = VK_FORMAT_D32_SFLOAT
+			storeOp = VK_ATTACHMENT_STORE_OP_DONT_CARE
+			finalLayout = VK_IMAGE_LAYOUT_UNDEFINED
+			stencilLoadOp = decided by clearDepthStencil value
+		}
+		DepthStencil = 
+		{
+			format = VK_FORMAT_D24_UNORM_S8_UINT
+			storeOp = VK_ATTACHMENT_STORE_OP_DONT_CARE
+			finalLayout = VK_IMAGE_LAYOUT_UNDEFINED
+			stencilLoadOp = decided by clearDepthStencil value
+		{
+		Present = 
+		{
+			format = VK_FORMAT_B8G8R8A8_UNORM
+			storeOp = VK_ATTACHMENT_STORE_OP_STORE
+			finalLayout = VK_IMAGE_LAYOUT_PRESENT_SRC_KHR
+			stencilLoadOp = VK_ATTACHMENT_LOAD_OP_DONT_CARE
+		}
+		
+		stencilStoreOp is always VK_ATTACHMENT_STORE_OP_DONT_CARE
+		
+		clearColor takes a color in whatever format makes sense (recognized color names, hex, and comma separated floats or scaled bytes)
+		clearDepthStencil is true or false
+		
+		Setting a clear value will make loadOp = VK_ATTACHMENT_LOAD_OP_CLEAR, otherwise, it will be VK_ATTACHMENT_LOAD_OP_DONT_CARE
+			
+		-->
+		<Attachment name="GDiffuse" type="Color" clearColor="White"/>
+		<Attachment name="GNormal" type="Color" clearColor="White"/>
+		<Attachment name="Depth" type="Depth" clearDepthStencil="true"/>
+		<Attachment name="Present" type="Present" clearColor="White"/>
+	</Attachments>
+	<Subpasses>
+		<!-- Describe the subpasses in this render pass
+		
+		Each subpass requires a name, which will be referenced by materials when specifying subpasses
+		
+		Each subpass must specify what attachments it uses, and in what capacity
+		
+		Attachment types:
+		ColorAttachment - the subpass will use this attachment as either a shader input texture or as a color attachment to write to
+		DepthStencilAttachment - the subpass will use this attachment as a depth stencil attachment for tests
+		InputAttachment - the subpass will use this attachment as a shader input texture locked to a matched fragment coordinate
+		PreserveAttachment - the subpass will not use this attachment, but will keep its contents saved for future subpasses
+		ResolveAttachment - the subpass will resolve multisampling?  We need to figure that out
+		
+		Each attachment node requires a name, which will correspond to an attachment name above
+		Each attachment node requires a layout, which will describe how the attachment is to be used
+		Layouts:
+		color - color attachment output
+		depthStencil - depth stencil output
+		inputRead - input attachment
+		depthRead - input depth stencil texture
+		-->
+		<Subpass name="DepthPrepass">
+			<Attachments>
+				<DepthStencilAttachment name="Depth" layout="depthStencil"/>
+				<PreserveAttachment name="GDiffuse"/>
+				<PreserveAttachment name="GNormal"/>
+				<PreserveAttachment name="Present"/>
+			</Attachments>
+		</Subpass>
+		<Subpass name="CreateGBuffers">
+			<Attachments>
+				<ColorAttachment name="GDiffuse" layout="color"/>
+				<ColorAttachment name="GNormal" layout="color"/>
+				<DepthStencilAttachment name="Depth" layout="depthRead"/>
+				<PreserveAttachment name="Present"/>
+			</Attachments>
+		</Subpass>
+		<Subpass name="Composite">
+			<Attachments>
+				<InputAttachment name="GDiffuse" layout="inputRead"/>
+				<InputAttachment name="GNormal" layout="inputRead"/>
+				<ColorAttachment name="Present" layout="color"/>
+				<ReadAttachment name="Depth" layout="shaderRead"/>
+			</Attachments>
+		</Subpass>
+	</Subpasses>
+	<Dependencies>
+		<!-- Describe dependencies between subpasses 
+		
+		Structure is Dependency node 
+			Optional localized boolean attribute describing if the dependency is localized to a region of the framebuffer (potential optimization)
+		
+		Dependency node has two child nodes (Source and Target)
+		These child nodes have a subpass attribute, noting the dependency, and a usage attribute, which describes what stage it performs the relevant work-->
+		<Dependency localized="true">
+			<Source subpass="DepthPrepass" usage="depthWrite"/>
+			<Target subpass="CreateGBuffers" usage="depthRead"/>
+		</Dependency>
+		<Dependency>
+			<Source subpass="CreateGBuffers" usage="colorAttachmentWrite"/>
+			<Target subpass="Composite" usage="fragmentRead"/>
+		</Dependency>
+	</Dependencies>
+</RenderPass>

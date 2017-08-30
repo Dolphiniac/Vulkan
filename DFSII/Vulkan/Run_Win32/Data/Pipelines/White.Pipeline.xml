@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GraphicsPipeline parent="none">
+	<!-- Optional: for shaders, provide stage="vertex" or similar, otherwise, deduced from extension-->
+	<Shader format="glsl" name="white.vert"/>
+	<Shader format="glsl" name="white.frag"/>
+	<VertexState>
+		<VertexType name="PCT"/>
+		<InputAssembly topology="triangleList" primitiveRestartEnable="false"/>
+	</VertexState>
+	<DynamicState>
+		<!--	
+		Include any of the following nodes to allow vkCmdSet[Property] in a command buffer
+		<Viewport/>
+		<Scissor/>
+		<BlendConstants/>
+		<DepthBias/>
+		<DepthBounds/>
+		<LineWidth/>
+		<StencilCompareMask/>
+		<StencilReference/>
+		<StencilWriteMask/>
+		-->
+	</DynamicState>
+	<MultisampleState>
+		<SampleShading enable="false" minValue="0.f">
+			<!-- <SampleMask value="15"/>-->
+		</SampleShading>
+		<RasterizationSamples count="1"/>
+		<Miscellaneous alphaToOneEnable="false" alphaToCoverageEnable="false"/>
+	</MultisampleState>
+	<ColorBlendState>
+		<BlendConstants value="0.f,0.f,0.f,0.f"/>
+		<LogicOp enable="false" op="noop"/>
+		<!-- One attachment state is used for each attachment in the subpass -->
+		<AttachmentState>
+			<BlendEnable value="false"/>
+			<ColorBlend blendOp="add" writeMask="rgba" dstFactor="inverseSrcAlpha" srcFactor="srcAlpha"/>
+			<AlphaBlend blendOp="add" dstFactor="one" srcFactor="one"/>
+		</AttachmentState>
+	</ColorBlendState>
+	<DepthStencilState>
+		<DepthTest testEnable="true" writeEnable="true" compareOp="lessEqual"/>
+		<DepthBounds enable="false" min="0.f" max="1.f"/>
+		<StencilTest enable="false">
+			<BackStencil compareMask="1" compareOp="always" depthFailOp="keep" failOp="keep" passOp="replace" reference="1" writeMask="1"/>
+			<FrontStencil compareMask="1" compareOp="always" depthFailOp="keep" failOp="keep" passOp="replace" reference="1" writeMask="1"/>
+		</StencilTest>
+	</DepthStencilState>
+	<TessellationState patchControlPoints="0"/>
+	<ViewportState>
+		<Viewport minDepth="0.f" maxDepth="1.f" width="full" height="full" topLeft="0.f,0.f"/>
+		<Scissor topLeft="0,0" width="full" height="full"/>
+	</ViewportState>
+	<RasterizationState>
+		<DepthBias enable="false" clampEnable="false" clamp="0.f" constantFactor="0.f" slopeFactor="0.f"/>
+		<RasterizationMode	cullMode="backFace" frontFace="ccw" polyMode="fill" discardEnable="false" lineWidth="1.f"/>
+	</RasterizationState>
+</GraphicsPipeline>

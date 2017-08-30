@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Material>
+	<RenderPass name="SSAO">
+		<Base>
+			<Subpass name="CreateGBuffers">
+				<Pipeline name="DiffuseNoDepthWrite"/>
+				<TextureBinding name="gSkyboxTex" src="stormySkybox.jpg" textureType="cube"/>
+			</Subpass>
+		</Base>
+	</RenderPass>
+</Material>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Actor name="unitychan">
+	<Transform position="0,0,2"/>
+	<Model shader="skinDebugDiffuseOnly">
+		<Mapping material="face" diffuse="face_00.tga"/>
+		<Mapping material="eye_L1" diffuse="eye_iris_L_00.tga"/>
+		<Mapping material="eye_R1" diffuse="eye_iris_R_00.tga"/>
+		<Mapping material="eyeline" diffuse="eyeline_00.tga"/>
+		<Mapping material="eyebase" diffuse="eyeline_00.tga"/>
+		<Mapping material="hair" diffuse="hair_01.tga" normal="hair_01_NRM.tga"/>
+		<Mapping material="body" diffuse="body_01.tga" normal="body_01_NRM.tga"/>
+		<Mapping material="skin1" diffuse="skin_01.tga"/>
+		<Mapping material="mat_cheek" diffuse="cheek_00.tga"/>
+	</Model>
+</Actor>

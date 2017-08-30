@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Material>
+	<RenderPass name="SSAO">
+		<Base>
+			<Subpass name="DepthPrepass">
+				<Pipeline name="DeferredVertexOnly"/>
+			</Subpass>
+			<Subpass name="CreateGBuffers">
+				<Pipeline name="Deferred"/>
+				<TextureBinding name="gDiffuseTex" src="white.png"/>
+				<TextureBinding name="gBumpTex" src="white.png"/>
+			</Subpass>
+		</Base>
+		<Instance name="Tiles">
+			<Subpass name="CreateGBuffers">
+				<TextureBinding name="gDiffuseTex" src="mramor6x6.png"/>
+				<TextureBinding name="gBumpTex" src="mramor6x6-bump.png"/>
+			</Subpass>
+		</Instance>
+		<Instance name="Brick">
+			<Subpass name="CreateGBuffers">
+				<TextureBinding name="gDiffuseTex" src="kamen.png"/>
+				<TextureBinding name="gBumpTex" src="kamen-bump.png"/>
+			</Subpass>
+		</Instance>
+		<Instance name="Sandstone">
+			<Subpass name="CreateGBuffers">
+				<TextureBinding name="gDiffuseTex" src="KAMEN-stup.png"/>
+			</Subpass>
+		</Instance>
+	</RenderPass>
+	<RenderPass name="LightmapRender">
+		<Base>
+			<Subpass name="Render">
+				<Pipeline name="DeferredVertexOnlyLightmap"/>
+			</Subpass>
+		</Base>
+	</RenderPass>
+</Material>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Associations>
+	<Mapping srcName="sprljci" dstMat="Sibenik"/>
+	<Mapping srcName="staklo" dstMat="Sibenik"/>
+	<Mapping srcName="kamen_zid" dstMat="Sibenik.Brick"/>
+	<Mapping srcName="stupovi" dstMat="Sibenik.Sandstone"/>
+	<Mapping srcName="pod" dstMat="Sibenik.Tiles"/>
+	<Mapping srcName="pod_tepih" dstMat="Sibenik"/>
+	<Mapping srcName="pod_rub" dstMat="Sibenik.Brick"/>
+	<Mapping srcName="kamen_zid_prozor" dstMat="Sibenik.Brick"/>
+	<Mapping srcName="zid_vani" dstMat="Sibenik.Brick"/>
+	<Mapping srcName="kamen_zid_parapet" dstMat="Sibenik.Sandstone"/>
+	<Mapping srcName="staklo_crveno" dstMat="Sibenik"/>
+	<Mapping srcName="rozeta" dstMat="Sibenik.Sandstone"/>
+	<Mapping srcName="staklo_zeleno" dstMat="Sibenik"/>
+	<Mapping srcName="staklo_plavo" dstMat="Sibenik"/>
+	<Mapping srcName="staklo_zuto" dstMat="Sibenik"/>
+</Associations>

@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="General">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>
+      </Extensions>
+    </Filter>
+    <Filter Include="ShadersFoSho">
+      <UniqueIdentifier>{d6071f27-774c-481f-9223-ecdd85cdfa83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General\MaterialMappings">
+      <UniqueIdentifier>{26978db9-9aaa-4b83-864e-5864b877849b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pipelines">
+      <UniqueIdentifier>{1911bdb5-6059-432c-9dd5-251bd607b80a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Materials">
+      <UniqueIdentifier>{36dcd594-aecf-4202-88cf-4348d63ce136}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderPasses">
+      <UniqueIdentifier>{c6202f47-ca21-42e7-877b-280b839be5af}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main_Win32.cpp">
+      <Filter>General</Filter>
+    </ClCompile>
+    <ClCompile Include="TheGame.cpp">
+      <Filter>General</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera3D.cpp">
+      <Filter>General</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>General</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>General</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TheGame.hpp">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera3D.hpp">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.hpp">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.hpp">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCommon.hpp">
+      <Filter>General</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Run_Win32\Data\Shaders\axis.frag">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\axis.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\basicLights.frag">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\basicLights.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\basicSpecular.frag">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\basicSpecular.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\fog.frag">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\fog.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\fvf.frag">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\fvf.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\passthrough.frag">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\passthrough.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\time.frag">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\time.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\dissolve.frag">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\dissolve.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\secCam.frag">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\secCam.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\ripple.frag">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\ripple.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\UniformBlocks.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\skinDebugDiffuseOnly.frag">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\skinDebugDiffuseOnly.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\passthrough.dvert" />
+    <None Include="..\..\Run_Win32\Data\Shaders\white.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\white.frag">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\skybox.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\skybox.frag">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\positionOnly.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\deferred.frag">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\positionClip.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\deferredComposite.frag">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\doNothing.frag">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\generateNormals.comp">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\positionOnlyLightmap.vert">
+      <Filter>ShadersFoSho</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\Run_Win32\Data\MaterialMappings\unitychan.xml">
+      <Filter>General\MaterialMappings</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\Shaders\ShaderMeta.xml">
+      <Filter>ShadersFoSho</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\SpriteResources\SpriteResource.xml">
+      <Filter>General</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\Pipelines\Diffuse.Pipeline.xml">
+      <Filter>Pipelines</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\Pipelines\White.Pipeline.xml">
+      <Filter>Pipelines</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\Materials\Sibenik.Material.xml">
+      <Filter>Materials</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\Materials\Sibenik.Association.xml">
+      <Filter>Materials</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\Pipelines\DiffuseNoDepthWrite.Pipeline.xml">
+      <Filter>Pipelines</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\Materials\StormySkybox.Material.xml">
+      <Filter>Materials</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\RenderPasses\SSAO.RenderPass.xml">
+      <Filter>RenderPasses</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\Pipelines\DeferredVertexOnly.Pipeline.xml">
+      <Filter>Pipelines</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\Pipelines\Deferred.Pipeline.xml">
+      <Filter>Pipelines</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\Materials\DeferredComposite.Material.xml">
+      <Filter>Materials</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\Pipelines\DeferredComposite.Pipeline.xml">
+      <Filter>Pipelines</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\RenderPasses\LightmapRender.RenderPass.xml">
+      <Filter>RenderPasses</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\Pipelines\DeferredVertexOnlyLightmap.Pipeline.xml">
+      <Filter>Pipelines</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>

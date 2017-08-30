@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GraphicsPipeline parent="Diffuse">
+	<Shader name="skybox.vert"/>
+	<Shader name="skybox.frag"/>
+	<ColorBlendState>
+		<AttachmentState/>
+		<AttachmentState>
+			<BlendEnable value="false"/>
+		</AttachmentState>
+	</ColorBlendState>
+	<DepthStencilState>
+		<DepthTest writeEnable="false"/>
+	</DepthStencilState>
+</GraphicsPipeline>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Sprites>
+	<Sprite name="soft particle" path="Data/Textures/soft_particle.png"/>
+	<Sprite name="John Cena" path="Data/Textures/johncena.png"/>
+</Sprites>

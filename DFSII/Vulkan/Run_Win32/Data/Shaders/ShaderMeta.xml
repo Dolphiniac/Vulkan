@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Shaders>
+	<Shader name="skinDebugDiffuseOnly">
+		<VertexType name="Vertex_PCTTBB"/>
+		<Uniforms>
+			<UniformBlock name="GlobalMatrices"/>
+			<UniformArray type="mat4" name="gSkinningMatrices"/>
+			<Uniform type="bool" name="gIsDebugging"/>
+		</Uniforms>
+	</Shader>
+</Shaders>

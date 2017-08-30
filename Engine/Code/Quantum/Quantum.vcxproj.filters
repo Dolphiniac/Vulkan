@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{be4838c8-68b2-4d67-9792-946acf048fe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FileSystem">
+      <UniqueIdentifier>{89d62476-4401-4cfc-b781-8e87c321ab76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{7028617e-16d6-47a6-8142-360c8958b95c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{2b05e369-ccf5-4616-8954-f2312618a5d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hephaestus">
+      <UniqueIdentifier>{9bb2fbd3-897e-482e-be6f-9c3aff709389}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hephaestus\SPIR-V">
+      <UniqueIdentifier>{ab6c347e-1cbd-4a49-ae4d-1cb8047907bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hephaestus\Dispatch">
+      <UniqueIdentifier>{aa24da5b-9638-4422-a9be-13d8ec4f6d91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hephaestus\Resource">
+      <UniqueIdentifier>{57b72c75-5c84-481a-937b-023b2363572b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hephaestus\Rendering">
+      <UniqueIdentifier>{cb88cef8-48cb-4e44-a697-1290212933e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hephaestus\Factory">
+      <UniqueIdentifier>{43d689a4-436f-4afa-9a28-94282857f94b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hephaestus\MiscNonDispatch">
+      <UniqueIdentifier>{24b02f96-6463-4af9-a7ba-b4b33ba8c3b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hephaestus\DSL">
+      <UniqueIdentifier>{bad14920-0f62-4d31-9c9f-65363d6ec314}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\String.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="QuantumCommon.h" />
+    <ClInclude Include="Core\EventSystem.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\FileUtils.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\Path.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Color.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Vector2.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\Declarations.h">
+      <Filter>Hephaestus</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Vector3.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\MathCommon.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Vector4.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Noise.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\Spirv.h">
+      <Filter>Hephaestus\SPIR-V</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\CommandBuffer.h">
+      <Filter>Hephaestus\Dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\Instance.h">
+      <Filter>Hephaestus\Dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\LogicalDevice.h">
+      <Filter>Hephaestus\Dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\PhysicalDevice.h">
+      <Filter>Hephaestus\Dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\Queue.h">
+      <Filter>Hephaestus\Dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\BufferDescriptor.h">
+      <Filter>Hephaestus\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\Texture.h">
+      <Filter>Hephaestus\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\Mesh.h">
+      <Filter>Hephaestus\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\MeshRenderer.h">
+      <Filter>Hephaestus\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\Pipeline.h">
+      <Filter>Hephaestus\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\MaterialState.h">
+      <Filter>Hephaestus\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\Material.h">
+      <Filter>Hephaestus\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\Renderable.h">
+      <Filter>Hephaestus\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\Manager.h">
+      <Filter>Hephaestus\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\PipelineGenerator.h">
+      <Filter>Hephaestus\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\DescriptorSetLayoutGenerator.h">
+      <Filter>Hephaestus\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\Shader.h">
+      <Filter>Hephaestus\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\CommandPool.h">
+      <Filter>Hephaestus\MiscNonDispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\RenderPass.h">
+      <Filter>Hephaestus\MiscNonDispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\Surface.h">
+      <Filter>Hephaestus\MiscNonDispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\Swapchain.h">
+      <Filter>Hephaestus\MiscNonDispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\VertexType.h">
+      <Filter>Hephaestus\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\QueueFamily.h">
+      <Filter>Hephaestus\MiscNonDispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\Tokenizer.h">
+      <Filter>Hephaestus\DSL</Filter>
+    </ClInclude>
+    <ClInclude Include="Hephaestus\Compiler.h">
+      <Filter>Hephaestus\DSL</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SimpleMap.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\String.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\EventSystem.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\FileUtils.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\Path.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Color.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Vector2.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Vector3.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Vector4.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\Spirv.cpp">
+      <Filter>Hephaestus\SPIR-V</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\CommandBuffer.cpp">
+      <Filter>Hephaestus\Dispatch</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\Instance.cpp">
+      <Filter>Hephaestus\Dispatch</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\LogicalDevice.cpp">
+      <Filter>Hephaestus\Dispatch</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\PhysicalDevice.cpp">
+      <Filter>Hephaestus\Dispatch</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\Queue.cpp">
+      <Filter>Hephaestus\Dispatch</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\BufferDescriptor.cpp">
+      <Filter>Hephaestus\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\Texture.cpp">
+      <Filter>Hephaestus\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\Mesh.cpp">
+      <Filter>Hephaestus\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\MeshRenderer.cpp">
+      <Filter>Hephaestus\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\Pipeline.cpp">
+      <Filter>Hephaestus\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\MaterialState.cpp">
+      <Filter>Hephaestus\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\Material.cpp">
+      <Filter>Hephaestus\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\Manager.cpp">
+      <Filter>Hephaestus\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\PipelineGenerator.cpp">
+      <Filter>Hephaestus\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\DescriptorSetLayoutGenerator.cpp">
+      <Filter>Hephaestus\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\Shader.cpp">
+      <Filter>Hephaestus\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\CommandPool.cpp">
+      <Filter>Hephaestus\MiscNonDispatch</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\RenderPass.cpp">
+      <Filter>Hephaestus\MiscNonDispatch</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\Surface.cpp">
+      <Filter>Hephaestus\MiscNonDispatch</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\Swapchain.cpp">
+      <Filter>Hephaestus\MiscNonDispatch</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\VertexType.cpp">
+      <Filter>Hephaestus\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\QueueFamily.cpp">
+      <Filter>Hephaestus\MiscNonDispatch</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\Tokenizer.cpp">
+      <Filter>Hephaestus\DSL</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\Compiler.cpp">
+      <Filter>Hephaestus\DSL</Filter>
+    </ClCompile>
+    <ClCompile Include="Hephaestus\Declarations.cpp">
+      <Filter>Hephaestus</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Core\Subroutines.asm">
+      <Filter>Core</Filter>
+    </None>
+    <None Include="Core\EventSystem.inl">
+      <Filter>Core</Filter>
+    </None>
+  </ItemGroup>
+</Project>

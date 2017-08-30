@@ -1,0 +1,39 @@
+
+layout (constant_id = 0) const uint numVertices;
+
+struct Vertex
+{
+	vec3 position;
+	vec3 normal;
+};
+
+const int 
+buffer VertexInfo
+{
+	Vertex vertices[numVertices];
+};
+
+layout (local_size_x = 1536) in;
+void main()
+{
+	uint faceIndex = gl_GlobalInvocationID.x;
+	uint firstVertIndex = faceIndex * 3;
+
+	if (firstVertIndex < numVertices)
+	{
+		Vertex vert1 = vertices[firstVertIndex];
+		Vertex vert2 = vertices[firstVertIndex + 1];
+		Vertex vert3 = vertices[firstVertIndex + 2];
+
+		vec3 pos1 = normalize(vert1.position);
+		vec3 pos2 = normalize(vert2.position);
+		vec3 pos3 = normalize(vert3.position);
+
+		vec3 norm = cross(pos2 - pos1, pos3 - pos2);
+		norm = normalize(norm);
+
+		vert1.normal = norm;
+		vert2.normal = norm;
+		vert3.normal = norm;
+	}
+}

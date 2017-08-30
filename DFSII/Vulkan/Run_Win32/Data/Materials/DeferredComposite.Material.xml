@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Material>
+	<RenderPass name="SSAO">
+		<Base>
+			<Subpass name="Composite">
+				<Pipeline name="DeferredComposite"/>
+				<InputAttachmentBinding name="gDiffuseInput" src="GDiffuse"/>
+				<InputAttachmentBinding name="gNormalInput" src="GNormal"/>
+				<ReadAttachmentBinding name="gLightmap" src="LightmapRender.Lightmap"/>
+				<ReadAttachmentBinding name="gDepth" src="Depth"/>
+			</Subpass>
+		</Base>
+	</RenderPass>
+</Material>
